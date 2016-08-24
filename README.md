@@ -16,9 +16,9 @@
 
   * 通过alloc、initWithFrame或者类方法topScrollMenuWithFrame去创建
 
-  * 遵循SGTopScrollMenuDelegate协议的topScrollMenuDelegate方法
+  * 遵循SGTopTitleViewDelegate协议的delegate_SG方法
   ```Objective-C
-  - (void)SGTopScrollMenu:(SGTopScrollMenu *)topScrollMenu didSelectTitleAtIndex:(NSInteger)index；
+  - (void)SGTopTitleView:(SGTopTitleView *)topTitleView didSelectTitleAtIndex:(NSInteger)index；
   ```
   
 * SGTopTitleView使用方法二：（详细使用方法，请参考Demo）
@@ -28,5 +28,6 @@
 * 通过Label创建并在其上添加手势（UITapGestureRecognizer）
 
 * 通过 
-```Objective-C - (CGRect)boundingRectWithSize:(CGSize)size options:(NSStringDrawingOptions)options attributes:(nullable NSDictionary *)attributes context:(nullable NSStringDrawingContext *)context;
+```Objective-C
+- (CGRect)boundingRectWithSize:(CGSize)size options:(NSStringDrawingOptions)options attributes:(nullable NSDictionary *)attributes context:(nullable NSStringDrawingContext *)context;
 ```根据标题内容：实现标题宽度自适应
